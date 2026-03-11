@@ -22,7 +22,12 @@ export function buildFilteredSchema(schema: GraphQLSchema, reachable: Set<string
       }
       return {
         ...def,
-        fields: def.fields.filter((field) => reachable.has(unwrapTypeName(field.type))),
+        fields: def.fields.filter((field) => {
+          if (!reachable.has(unwrapTypeName(field.type))) {
+            return false;
+          }
+          return field.arguments?.every((arg) => reachable.has(unwrapTypeName(arg.type))) ?? true;
+        }),
       };
     });
 

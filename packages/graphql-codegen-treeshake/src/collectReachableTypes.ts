@@ -1,4 +1,4 @@
-import { type GraphQLSchema, type DocumentNode, type GraphQLNamedType, isInputObjectType, getNamedType, isObjectType, isInterfaceType, isUnionType, TypeInfo, visit, visitWithTypeInfo } from 'graphql';
+import { type DocumentNode, type GraphQLNamedType, type GraphQLSchema, getNamedType, isInputObjectType, isInterfaceType, isObjectType, isUnionType, TypeInfo, visit, visitWithTypeInfo } from 'graphql';
 import { BUILT_IN_SCALARS } from './consts';
 
 export function collectReachableTypes(schema: GraphQLSchema, documents: DocumentNode[]): Set<string> {
@@ -66,7 +66,7 @@ export function collectReachableTypes(schema: GraphQLSchema, documents: Document
             addType(schema.getType(node.typeCondition.name.value));
           }
         },
-      })
+      }),
     );
   }
 
