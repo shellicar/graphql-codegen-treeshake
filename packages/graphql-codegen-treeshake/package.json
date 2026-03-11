@@ -16,7 +16,7 @@
   ],
   "author": "Stephen Hellicar",
   "license": "MIT",
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@10.32.1",
   "private": false,
   "type": "module",
   "repository": {
@@ -49,19 +49,19 @@
     "*.md"
   ],
   "dependencies": {
-    "@graphql-codegen/client-preset": "^5.2.2",
+    "@graphql-codegen/client-preset": "^5.2.4",
     "@graphql-codegen/typescript": "^5.0.9"
   },
   "peerDependencies": {
     "graphql": "^16.12.0"
   },
   "devDependencies": {
-    "@graphql-codegen/plugin-helpers": "^6.1.0",
-    "@shellicar/build-clean": "^1.2.3",
+    "@graphql-codegen/plugin-helpers": "^6.1.1",
+    "@shellicar/build-clean": "^1.2.4",
     "@tsconfig/node22": "^22.0.5",
-    "@types/node": "^25.3.2",
+    "@types/node": "^25.4.0",
     "@vitest/coverage-v8": "^4.0.18",
-    "graphql": "^16.12.0",
+    "graphql": "^16.13.1",
     "terser": "^5.46.0",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
